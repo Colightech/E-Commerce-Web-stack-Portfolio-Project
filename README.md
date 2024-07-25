@@ -2,7 +2,7 @@
 
 ## Project Title: E-COMMERCE WEBSITE
 
-Public GitHub repository: https://github.com/Colightech/E-Commerce-Web-stack-Portfolio-Project/tree/main/frontend
+Public GitHub repository: https://github.com/Colightech/E-Commerce-Web-stack-Portfolio-Project/tree/main
 
 Google Doc: https://docs.google.com/document/d/1bYqsUJIIacaL1xLL6_jS3L-gModGDzQfqHlrpE6zipA/edit?usp=sharing
 
