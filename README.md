@@ -17,4 +17,4 @@ And a footer section
 Technology Use:
 React js, Css, 
 Intended to use MongoDB, but had little challenge on backend connection,
-I had to use a product Domy data js file as a Database, found under Assets on the folder structure.
+I had to use a product Dummy data js file as a Database, found under Assets on the folder structure.
