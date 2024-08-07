@@ -51,6 +51,11 @@
     cursor: pointer;
     margin-left: 30px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginsignup-container button:active {
+    background: #5c5c5c;
 }
 
 .loginsignup-login {

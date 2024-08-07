@@ -3,12 +3,17 @@
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+    align-items: center;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.nav-logo img {
+    cursor: pointer;
 }
 
 .nav-logo p {
@@ -89,3 +94,165 @@
     color: #f7f5f5;
 }
 
+.navbar .drop-menu {
+    display: none;
+}
+
+/* ============================
+        MEDIA QUERY
+============================ */
+
+/* ============================
+        Screen Size 1280
+============================ */
+
+@media(max-width:1280px) {
+    .navbar {
+        padding: 12px 50px;
+    }
+
+    .nav-logo img {
+        width: 40px;
+    }
+
+    .nav-logo p {
+        font-size: 25px;
+    }
+
+    .nav-menu {
+        gap: 30px;
+        font-size: 16px;
+       
+    }
+
+    .nav-login-cart {
+        gap: 40px;
+    }
+
+    .nav-login-cart button {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .nav-login-cart img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-login-cart .nav-cart-count {
+        /* background: rgb(49, 209, 9); */
+        font-weight: 800;
+        font-size: 12px;
+        width: 17px;
+        height: 17px;
+    }
+}
+
+/* ============================
+        Screen Size 1040
+============================ */
+
+@media(max-width:1024px) {
+    .navbar {
+        padding: 12px 30px;
+    }
+
+    .nav-menu {
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    .nav-login-cart button {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .nav-login-cart img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-login-cart .nav-cart-count {
+        font-weight: 700;
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        margin-top: -30px;
+        margin-left: -45px;
+    }
+}
+
+/* ============================
+        Screen Size 800
+============================ */
+
+@media(max-width:800px) {
+    .navbar {
+        padding: 10px 0px;
+    }
+
+    .navbar .drop-menu {
+        display: block;
+        width: 30px;
+        height: 30px;
+        align-self: center;
+        justify-self: center;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    .nav-menu {
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background: #fff;
+        justify-content: center;
+        top: 60px;
+        box-shadow: 2px 3px 4px hsla(0, 0%, 0%, 0.2);
+        transition: 0.1s;
+    }
+
+    .nav-menu-visible {
+        display: flex;
+    }
+
+    .drop-menu.open {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* ============================
+        Screen Size 500
+============================ */
+@media(max-width:500px) {
+    .navbar {
+        padding: 8px 0px;
+    }
+
+    .navbar .nav-logo p {
+        display: none;
+    }
+
+    .nav-menu {
+        height: 70px;
+        top: 50px;
+        left: -40px;
+    }
+
+    .nav-login-cart {
+        transform: scale(0.9);
+        align-items: center;
+    }
+
+    .nav-login-cart img {
+        margin-top: 8px;
+    }
+
+    .nav-login-cart .nav-cart-count {
+        margin-top: -30px;
+    }
+}
