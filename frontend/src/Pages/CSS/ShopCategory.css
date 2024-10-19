@@ -1,47 +1,40 @@
-.shopcategory-banner {
-    display: block;
-    margin: 30px;
-    width: 82;
-}
-
-.shopcategory-indexSort {
+.shop-category {
     display: flex;
-    margin: 0px 170px;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-}
-
-.shopcategory-sort {
-    padding: 10px 20px;
-    border-radius: 40px;
-    border: 1px solid  #888;
-
-}
-
-.shopcategory-indexSort  span {
-    font-weight: 600;
-}
-
-.shopcategory-product {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 25px;
-    gap: 10px;
-}
-
-.shopcategory-loadmroe {
-    display: flex;
     justify-content: center;
+    margin: 10px 0;
+}
+
+.sort-container {
+    display: flex;
     align-items: center;
-    margin: 100px auto;
-    width: 233px;
-    height: 69px;
-    border-radius: 75px;
-    background: #ededed;
-    color: #787878;
-    font-size: 18px;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 87%;
+
+}
+
+.left-sort span {
     font-weight: 600;
-    cursor: pointer;
+}
+
+.right-sort {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+    box-shadow: 0 0 3px hsla(0, 0%, 0%, 0.1);
+    border-radius: 10px;
+}
+
+.right-sort img {
+    height: 9px;
+}
+
+.shop-category-item {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }

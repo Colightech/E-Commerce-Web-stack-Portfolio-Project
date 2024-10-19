@@ -1,0 +1,38 @@
+.list-product {
+    align-items: center;
+    width: 100%;
+    height: 740px;
+    padding: 10px 50px;
+    margin: 10px;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 0 5px 8px -2px #000000;
+}
+
+.listproduct-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    color: #545454;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.listproduct-format {
+    align-items: center;
+    font-weight: 500;
+}
+
+.listproduct-product-img {
+    height: 50px;
+}
+
+.listproduct-allproduct {
+    margin-top: 10px;
+}
+
+.listproduct-remove-icon {
+    cursor: pointer;
+}

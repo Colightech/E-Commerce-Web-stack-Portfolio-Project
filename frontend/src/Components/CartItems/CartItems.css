@@ -1,110 +1,159 @@
-.cart-items {
-    margin: 100px;
+.cart-item {
+    margin: 30px 150px;
 }
 
-.cart-items hr {
-    height: 3px;
-    background: #e2e2e2;
-    border: 0;
-}
-
-.cart-items-format-main {
+.product-heading {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 75px;
-    padding: 20px 0px;
-    color: #454545;
-    font-size: 18px;
+    grid-template-columns: 0.7fr 1.7fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 10px;
+    font-size: 20px;
     font-weight: 600;
 }
 
-.cart-items-format {
-    font-size: 17px;
-    font-weight: 500;
+.product-items-container {
+    margin: 15px;
 }
 
-.cart-icon-product-icon {
-    height: 62px;
+.product-items-container .quantity {
+    margin-left: 20px;
 }
 
-.cart-items_remove_icon {
+.product-items-container .delete {
+    margin-left: 30px;
+}
+
+.product-items-container img {
     width: 15px;
-    margin: 0px 40px;
     cursor: pointer;
 }
 
-.cart-items-quantity {
-    width: 64px;
-    height: 50px;
-    border: 2px solid #ebebee;
-    background: white;
+.product-items-container .quantity {
+    display: flex;
+    width: 35px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dbd7d7;
 }
 
-.cart-items-down {
-    display: flex;
-    margin: 100px 0px;
+.product-items-container .total {
+    margin-left: 10px;
 }
 
-.cart-items-total {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-right: 200px;
-    gap: 40px;
+.product-items-container .product-item-image {
+    width: 30px;
+    height: 40px;
 }
 
-.cart-items-total-item {
+.product-items-container h3 {
+    font-size: 16px;
+    width: 350px;
+    color: #575555;
+    margin-right: 10px;
+}
+
+.product-items-container .price,
+.product-items-container .total,
+.product-items-container .quantity {
+    font-size: 16px;
+    color: #575555;
+}
+
+.product-cart-total-coupon {
     display: flex;
+    width: 90%;
     justify-content: space-between;
-    padding: 15px 0px;
+    margin-top: 50px;
 }
 
-.cart-items-total button {
-    width: 262px;
-    height: 58px;
-    outline: none;
+.cart-total {
+    width: 60%;
+}
+
+.cart-total h2 {
+    margin-bottom: 20px;
+}
+
+.subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.shipping-fee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.cart-total .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.cart-total .total h3 {
+    font-size: 30px;
+}
+
+.cart-total button {
+    height: 50px;
+    padding: 10px 15px;
     border: none;
-    background: #ff5a5a;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 10px;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
+    background: #ff4141;
     cursor: pointer;
 }
 
-.cart-items-promocode {
-    flex: 1;
+.cart-total button:active {
+    background: #b71c1c;
+}
+
+.product-coupon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+}
+
+.input-button {
+    height: 40px;
+    width: 350px;
+    width: 400px;
+}
+
+.input-button input {
+    height: 30px;
+    width: 250px;
     font-size: 16px;
-    font-weight: 500;
-}
-
-.cart-items-promocode p {
-    color: #555;
-}
-
-.cart-items-promobox {
-    width: 504px;
-    margin-top: 15px;
-    padding-left: 20px;
-    height: 58px;
-    background: #eaeaea;
-}
-
-.cart-items-promobox input {
+    padding: 10px;
     border: none;
     outline: none;
-    background: transparent;
-    font-size: 16px;
-    width: 330px;
+    background: #f4f0f0;
+}
+
+.input-button button {
     height: 50px;
-}
-
-.cart-items-promobox button {
-    width: 170px;
-    height: 58px;
+    width: 100px;
     font-size: 16px;
-    background: black;
+    font-weight: 600;
+    padding: 13px;
+    border: none;
+    outline: none;
+    background: #000;
+    color: #fff;
     cursor: pointer;
-    color: white;
 }
 
+.input-button button:active {
+    background: #4c4c4c;
+}

@@ -1,69 +1,71 @@
 import React, { useContext } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
-import remove_icon from '../Assets/cart_cross_icon.png'
+import cart_cross_icon from '../Assets/cart_cross_icon.png'
 
 const CartItems = () => {
-    const {getTotalCartAmount,all_product,cartItems,removeFromCart} = useContext(ShopContext);
+    const {all_product, cartItems, removeFromCart, getTotalAmount} = useContext(ShopContext);
 
   return (
-    <div className='cart-items'>
-        <div className="cart-items-format-main">
-            <p>Products</p>
-            <p>Title</p>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Total</p>
-            <p>Remove</p>
+    <div className='cart-item'>
+        <div className="product-heading">
+            <div className="product-image">Product</div>
+            <div className="product-title">Title</div>
+            <div className="product-price">Price</div>
+            <div className="product-quantity">Quantity</div>
+            <div className="product-total">Total</div>
+            <div className="product-delete">Remove</div>
         </div>
-        <hr />
-        {all_product.map((e)=> {
-            if(cartItems[e.id]>0)
-            {
-                return <div>
-                <div className="cart-items-format cart-items-format-main">
-                    <img src={e.image} alt="" className='cart-icon-product-icon' />
-                    <p>{e.name}</p>
-                    <p>${e.new_price}</p>
-                    <button className='cart-items-quantity'>{cartItems[e.id]}</button>
-                    <p>${e.new_price*cartItems[e.id]}</p>
-                    <img src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" className='cart-items_remove_icon' />
+        <hr/>
+
+        {all_product.map((e)=>{
+            if (cartItems[e.id]>0) {
+                return  <div>
+                <div className="product-items-container product-heading">
+                    <img className='product-item-image' src={e.image} alt="" />
+                    <h3>{e.name}</h3>
+                    <div className="price">${e.new_price}</div>
+                    <div className="quantity">{cartItems[e.id]}</div>
+                    <div className="total">${e.new_price*cartItems[e.id]}</div>
+                    <div className="delete">
+                        <img onClick={()=>{removeFromCart(e.id)}} src={cart_cross_icon} alt="" />
+                    </div>
                 </div>
-                <hr />
-              </div>
+                <hr/>
+            </div>
             }
-            return null;
+            else {
+                return null;
+            }
         })}
-        <div className="cart-items-down">
-            <div className="cart-items-total">
-                <h1>Cart Total</h1>
-                <div>
-                    <div className="cart-items-total-item">
-                        <p>Subtotal</p>
-                        <p>${getTotalCartAmount()}</p>
-                    </div>
-                    <hr />
-                    <div className="cart-items-total-item">
-                        <p>Shipping Fee</p>
-                        <p>Free</p>
-                    </div>
-                    <hr />
-                    <div className="cart-items-total-item">
-                       <h3>Total</h3>
-                       <h3>${getTotalCartAmount()}</h3>
-                    </div>
+
+        <div className="product-cart-total-coupon">
+            <div className="cart-total">
+                <h2>Cart Total</h2>
+                <div className="subtotal">
+                    <p>Subtotal</p>
+                    <div className="subtotal-price">${getTotalAmount()}</div>
+                </div>
+                <hr/>
+                <div className="shipping-fee">
+                    <p>Shipping Fee</p>
+                    <p>Free</p>
+                </div>
+                <hr/>
+                <div className="total">
+                    <h3>Total</h3>
+                    <p>${getTotalAmount()}</p>
                 </div>
                 <button>PROCEED TO CHECKOUT</button>
             </div>
-            <div className="cart-items-promocode">
-                <p>If you have a promo code, Enter it here</p>
-                <div className="cart-items-promobox">
-                    <input type='text' placeholder='Promo Code'/>
+            <div className="product-coupon">
+                <p>If you have a promo code, enter it here</p>
+                <div className="input-button">
+                    <input type="text" placeholder='Promo code...' />
                     <button>Submit</button>
                 </div>
             </div>
         </div>
-
     </div>
   )
 }

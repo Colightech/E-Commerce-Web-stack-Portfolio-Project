@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-shadow: 0 1px 5px -2px #000000;
+    margin-bottom: 1px;
+    background: #ffffff;
+}
+
+.nav-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+/* MEDIA QUARRY FOR 800PX DEVICE */
+@media(max-width:800px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .nav-logo .nav-logo-img {
+        width: 200px;
+    }
+    
+}
+
+@media(max-width:450px) {
+    .nav-logo .nav-logo-img {
+        width: 150px;
+    }
+}
