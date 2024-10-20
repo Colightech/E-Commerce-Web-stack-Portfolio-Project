@@ -14,6 +14,11 @@ app.use(cors());
 
 // Database connection with MongoDB
 mongoose.connect("mongodb+srv://admin:admin123@cluster0.gysmy.mongodb.net/ecommerce-portfolio-project")
+.then(() => {
+    console.log("MongoDB connected successfully");
+}).catch((error) => {
+    console.error("MongoDB connection failed:", error);
+});
 
 // API Creation
 app.get("/",(req,res)=>{
